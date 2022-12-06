@@ -1,0 +1,447 @@
+@include breakpoint('M') {
+    .tmpl_hh_about .tmpl_hh_about__title {
+        span {
+            font-size: 38px;
+        }
+    }
+
+    .tmpl_hh_path {
+        .tmpl_hh_path__title {
+            span {
+                font-size: 38px;
+            }
+        }
+    }
+
+    .tmpl_hh_footer {
+        .tmpl_hh_footer__title {
+            font-size: 38px;
+        }
+    }
+
+    .tmpl_hh_team {
+        .tmpl_hh_team__title {
+            font-size: 38px;
+        }
+
+        .tmpl_hh_team__logos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 60px;
+            row-gap: 20px;
+
+            .tmpl_hh_team_logo {
+                &:nth-child(odd) {
+                    justify-self: end;
+                }
+
+                &:nth-child(even) {
+                    justify-self: start;
+                }
+            }
+        }
+    }
+
+    .tmpl_hh_info {
+        .tmpl_hh_info__title {
+            font-size: 38px;
+        }
+
+        .tmpl_hh_info__wrap {
+            grid-template-areas:
+                "A B B"
+                "A C C"
+                "D D E"
+                "F G G";
+            gap: 17px;
+            grid-template-columns: 284px 1fr 284px;
+            grid-template-rows: 175px 175px 175px 175px;
+        }
+    }
+
+    .tmpl_hh_direction {
+        .tmpl_hh_direction__title {
+            font-size: 38px;
+        }
+
+        .tmpl_hh_direction_slide {
+            .tmpl_hh_slide__wrap {
+                width: auto;
+                min-width: 440px;
+                max-width: 544px;
+            }
+
+            .tmpl_hh_slide__content {
+                flex-basis: 470px;
+                padding: 32px 28px;
+            }
+
+            .tmpl_hh_slide__title {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .tmpl_hh_benefits {
+        .tmpl_hh_benefits__title {
+            font-size: 38px;
+        }
+
+        .tmpl_hh_benefits__list {
+            flex-wrap: wrap;
+
+            .tmpl_hh_benefit {
+                flex: 0 0 calc(50% - 8px);
+            }
+        }
+    }
+}
+
+@include breakpoint('S') {
+    .tmpl_hh_direction {
+        padding: 0 22px 32px;
+
+        .tmpl_hh_direction__title {
+            margin-left: 64px;
+        }
+
+        .tmpl_hh_direction_slide {
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 24px;
+            flex-direction: column;
+
+            .tmpl_hh_slide__title {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            .tmpl_hh_slide__text {
+                font-size: 15px;
+                margin-bottom: 28px;
+            }
+
+            .tmpl_hh_slide__content {
+                flex-basis: unset;
+                padding: 32px 28px;
+            }
+
+            .tmpl_hh_slide__wrap {
+                border-radius: 24px;
+                max-width: unset;
+                min-width: unset;
+            }
+        }
+    }
+
+    .tmpl_hh_direction-pagination {
+        display: flex;
+    }
+
+    .tmpl_hh_direction_arrow--prev,
+    .tmpl_hh_direction_arrow--next {
+        width: 32px;
+        height: 32px;
+        z-index: 2;
+        top: unset;
+        bottom: 30%;
+        right: 48px
+    }
+
+    .tmpl_hh_direction_arrow--prev {
+        left: 48px
+    }
+
+    .tmpl_hh_info {
+        .tmpl_hh_info__title {
+            margin-bottom: 28px;
+        }
+
+        .tmpl_hh_info__wrap {
+            grid-template-areas:
+                "A B"
+                "A C"
+                "D D"
+                "E F"
+                "G G";
+            gap: 17px;
+            grid-template-columns: 284px 1fr;
+            grid-template-rows: 175px 175px 175px 175px 175px;
+
+            .tmpl_hh_card {
+                border-radius: 24px;
+                padding: 32px 24px;
+
+                .tmpl_hh_card__img {
+                    margin: -20px -12px;
+                }
+
+                .tmpl_hh_card_wrap {
+                    margin-top: 73px;
+                }
+
+                .tmpl_hh_card__number,
+                .tmpl_hh_card__number--big {
+                    font-size: 44px;
+                    margin-bottom: -2px;
+                }
+
+                .tmpl_hh_card--adaptive {
+                    padding: 25px 24px;
+                }
+
+                .tmpl_hh_card__text {
+                    font-size: 14px;
+                }
+
+                .tmpl_hh_card__text--big {
+                    font-size: 19px;
+                }
+
+                .tmpl_hh_card__img {
+                    border-radius: 18px;
+                }
+            }
+        }
+    }
+
+    .tmpl_hh_team {
+        .tmpl_hh_team__logos {
+            flex-wrap: wrap;
+            align-items: center;
+
+            .tmpl_hh_team_logo {}
+        }
+    }
+
+    .tmpl_hh_path {
+        .tmpl_hh_path__list {
+            grid-template-areas:
+                "A"
+                "B"
+                "C"
+                "D"
+                "E"
+                "F";
+        }
+    }
+
+    .tmpl_hh_benefits {
+        .tmpl_hh_benefits__list {
+            flex-direction: column;
+        }
+    }
+
+    .tmpl_hh_about .tmpl_hh_about__title {
+        span {
+            padding-right: 120px;
+        }
+    }
+}
+
+@include breakpoint('XS') {
+    .tmpl_hh_team {
+        .tmpl_hh_team__logos {
+            column-gap: 8px;
+        }
+    }
+
+    .tmpl_hh_wrapper {
+        padding: 0;
+    }
+
+    .tmpl_hh_header {
+        .tmpl_hh_header_slider {
+            margin-bottom: 40px;
+        }
+
+        .tmpl_hh_header__slogan {
+            font-size: 19px;
+            line-height: 23px;
+            padding: 0 18px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .tmpl_hh_team {
+        padding: 0 22px;
+        margin-bottom: 59px;
+
+        .tmpl_hh_team__title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 32px;
+        }
+
+        .tmpl_hh_team__logos {
+            .tmpl_hh_team_logo {
+                width: 130px;
+                height: 38px;
+                margin: 0 1px;
+            }
+        }
+    }
+
+    .tmpl_hh_about {
+        margin-bottom: 40px;
+
+        .tmpl_hh_about__title {
+            background-size: auto 82px;
+            border-radius: 26px;
+            padding-top: 28px;
+
+            span {
+                font-size: 24px;
+                line-height: 29px;
+                padding: 28px 22px;
+                border-radius: 20px;
+            }
+        }
+
+        .tmpl_hh_about_slider {
+            padding-right: 0;
+            margin-left: 22px;
+            margin-right: 22px;
+
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .tmpl_hh_about_slide {
+            border-radius: 24px;
+
+            .tmpl_hh_about_slide__image {
+                border-radius: 24px;
+            }
+        }
+
+        .tmpl_hh_about_arrow--prev,
+        .tmpl_hh_about_arrow--next {
+            width: 32px;
+            height: 32px;
+            z-index: 2;
+            top: unset;
+            bottom: 78px;
+            right: 38px;
+        }
+
+        .tmpl_hh_about_arrow--prev {
+            left: 38px;
+        }
+    }
+
+    .tmpl_hh_info {
+        padding: 40px 22px;
+
+        .tmpl_hh_info__title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .tmpl_hh_info__wrap {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 256px;
+        }
+    }
+
+    .tmpl_hh_benefits {
+        padding: 40px 22px;
+
+        .tmpl_hh_benefits__title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .tmpl_hh_benefits__list {
+            .tmpl_hh_benefit {
+                .tmpl_hh_benefit__icon {
+                    width: 48px;
+                    height: 48px;
+                    margin-bottom: 14px;
+                }
+
+                .tmpl_hh_benefit__description {
+                    font-size: 15px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+
+    .tmpl_hh_path {
+        margin-bottom: 40px;
+
+        .tmpl_hh_path__title {
+            background-size: auto 82px;
+            border-radius: 26px;
+            padding-top: 28px;
+
+            span {
+                font-size: 24px;
+                line-height: 29px;
+                padding: 28px 22px;
+                border-radius: 20px;
+            }
+        }
+
+        .tmpl_hh_path__list {
+            padding: 0 22px;
+        }
+
+        .tmpl_hh_point {
+            .tmpl_hh_point_text {
+                .tmpl_hh_point_text__strong {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+
+                .tmpl_hh_point_text__light {
+                    font-size: 15px;
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+
+    .tmpl_hh_direction {
+        .tmpl_hh_direction__title {
+            margin-left: 0;
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+
+    .tmpl_hh_footer {
+        padding: 0 22px 32px;
+
+        .tmpl_hh_footer__title {
+            font-size: 19px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .tmpl_hh_note {
+            font-size: 11px;
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+
+    .tmpl_hh_direction_arrow--prev,
+    .tmpl_hh_direction_arrow--next {
+        width: 32px;
+        height: 32px;
+        z-index: 2;
+        top: unset;
+        bottom: 183px;
+        right: 38px
+    }
+
+    .tmpl_hh_direction_arrow--prev {
+        left: 38px
+    }
+}
